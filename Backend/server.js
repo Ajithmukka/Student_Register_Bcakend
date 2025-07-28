@@ -10,6 +10,10 @@ app.use(bodyParser.json());
 
 app.use("/", studentRoutes);
 
+app.get('/', (req, res) => {
+  res.send('API is live ✅');
+});
+
 const PORT = process.env.PORT || 10000;
 app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
 
